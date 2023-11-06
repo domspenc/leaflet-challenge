@@ -1,6 +1,6 @@
 <h1>Leaflet Challenge</h1>
 <img
-        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Finterestingasfuck%2Fcomments%2F10vg7kk%2Fearthquake_epicenters_occur_mostly_along_tectonic%2F&psig=AOvVaw38jJ0f0DXUKyNe-lguvP4V&ust=1699350975989000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOjmn-2Nr4IDFQAAAAAdAAAAABAJ"
+        src="https://upload.wikimedia.org/wikipedia/commons/7/77/EQs_1900-2013_worldseis.png"
         alt="Plotted visualisation of earthquakes recorded between 1900 and 2013"
         width="650"
       />
@@ -32,8 +32,8 @@ The USGS is interested in building a new set of tools that will allow them to vi
 </br>
 <h3>🌎🌍🌏</h3>
 </br>
-<p>I acknowledge this challenge is incomplete. I was unable to finish it but intent to reattempt it at a later date./</p>
+<p>I acknowledge this challenge is incomplete. I was unable to finish it but intent to reattempt it at a later date.</p>
 </br>
 <p>Dataset sourced from https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php</p>
-<p>Image sourced from https://www.reddit.com/r/interestingasfuck/comments/10vg7kk/earthquake_epicenters_occur_mostly_along_tectonic/</p>
+<p>Image sourced from https://en.m.wikipedia.org/wiki/File:EQs_1900-2013_worldseis.png</p>
 </br>

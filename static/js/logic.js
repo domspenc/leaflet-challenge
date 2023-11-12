@@ -24,10 +24,42 @@ function createFeatures(earthquakeData){
         `</p>`
     );
   }
+  function styleInfo(feature){
+    return {
+      fillColor: getColour(feature.geometry.coordinates[2]),
+    radius: getRadius(feature.properties.mag),
+    }
+  }
+
+function getColour(depth){
+  if (depth > 90){
+    return "red"
+  }
+  if (depth > 50){
+    return "yellow"
+  }
+  if (depth > 20){
+    return "green"
+  }
+  else{
+    return "blue"
+  } 
+}
+
+function getRadius(magnitude){
+  if (magnitude = 0){
+    return 1
+  }
+  return magnitude * 4
+}
 
   // Create a GeoJSON layer that contains the features array on the earthquakeData object.
   // Run the onEachFeature function once for each piece of data in the array.
   let earthquakes = L.geoJSON(earthquakeData, {
+    pointToLayer: function (feature, latlng) {
+      return L.circleMarker(latlng);
+    },
+    style: styleInfo,
     onEachFeature: onEachFeature,
   });
 
@@ -76,4 +108,16 @@ function createMap(earthquakes){
       collapsed: false,
     })
     .addTo(myMap);
+  let legend = L.control({
+    position: "bottomright"
+  })
+  legend.onAdd = function(){
+    let div = L.DomUtil.create("div", "info legend")
+    div.innerHTML = "<i style = 'background: blue' ></i>0 - 20 <br>"
+    div.innerHTML += "<i style = 'background: green' ></i>20 - 50 <br>";
+    div.innerHTML += "<i style = 'background: yellow' ></i>50 - 90 <br>";
+    div.innerHTML += "<i style = 'background: red' ></i>90+ <br>";
+    return div
+  }
+  legend.addTo(myMap)
 }
